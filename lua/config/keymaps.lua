@@ -33,3 +33,13 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- back to normal mode
 vim.keymap.set("i", "jj", "<esc>")
+
+--copy over SSH
+vim.keymap.set("v", "<leader>cc", "<Plug>OSCYankVisual", { desc = "Copy over SSH" })
+
+--open with split
+vim.keymap.set("n", "<leader>gv", "<cmd>vert winc ]<cr>", { desc = "Open definition in vertical tab" })
+vim.keymap.set("n", "<leader>gh", "<cmd>winc ]<cr>", { desc = "Open definition in horizontal tab" })
+
+-- oil.lua
+vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
