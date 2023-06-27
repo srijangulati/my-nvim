@@ -8,14 +8,6 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Resume" }
 )
 
--- Terminal commands
-vim.keymap.set("n", "<leader>t1", "<cmd>1ToggleTerm<cr>", {
-  desc = "Toggle first terminals",
-})
-vim.keymap.set("n", "<leader>t2", "<cmd>2ToggleTerm<cr>", {
-  desc = "Toggle second terminals",
-})
-
 -- move commands
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")

@@ -156,6 +156,7 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "emmet-ls",
       },
     },
   },
@@ -168,8 +169,8 @@ return {
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
-          "tsx",
-          "typescript",
+        "tsx",
+        "typescript",
       })
     end,
   },
