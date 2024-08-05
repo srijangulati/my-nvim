@@ -35,3 +35,56 @@ vim.keymap.set("n", "<leader>gh", "<cmd>winc ]<cr>", { desc = "Open definition i
 
 -- oil.lua
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+
+-- copilot
+vim.api.nvim_set_keymap("i", "<C-H>", "copilot#Accept()", { expr = true, silent = true })
+
+-- Harpoon
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>mm",
+  "<cmd>:lua require('harpoon.mark').add_file()<cr>",
+  { noremap = true, silent = true, desc = "Add file to harpoon" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>mo",
+  "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<cr>",
+  { noremap = true, silent = true, desc = "Open harpoon menu" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>mh",
+  "<cmd>:lua require('harpoon.ui').nav_prev()<cr>",
+  { noremap = true, silent = true, desc = "Go to previous file in harpoon" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ml",
+  "<cmd>:lua require('harpoon.ui').nav_next()<cr>",
+  { noremap = true, silent = true, desc = "Go to next file in harpoon" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>m1",
+  "<cmd>:lua require('harpoon.ui').nav_file(1)<cr>",
+  { noremap = true, silent = true, desc = "Go to next file in harpoon" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>m2",
+  "<cmd>:lua require('harpoon.ui').nav_file(2)<cr>",
+  { noremap = true, silent = true, desc = "Go to next file in harpoon" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>m3",
+  "<cmd>:lua require('harpoon.ui').nav_file(3)<cr>",
+  { noremap = true, silent = true, desc = "Go to next file in harpoon" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>m4",
+  "<cmd>:lua require('harpoon.ui').nav_file(4)<cr>",
+  { noremap = true, silent = true, desc = "Go to next file in harpoon" }
+)
